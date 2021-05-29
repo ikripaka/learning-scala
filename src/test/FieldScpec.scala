@@ -3,7 +3,6 @@ import org.scalacheck.Prop.forAll
 import org.scalacheck.Properties
 
 object FieldSpecification extends Properties("Field") {
-  
   val f = Field.ComplexField
   val addAssoc = forAll {
     (a: ComplexNumber, b: ComplexNumber, c: ComplexNumber) => f.add(f.add(a, b), c) == f.add(a, f.add(b, c))
