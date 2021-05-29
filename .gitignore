@@ -1,2 +1,33 @@
 *.class
 *.log
+
+#bloop and metals
+.bloop
+.bsp
+.metals
+
+#scala 2
+.tasty
+
+#sbt
+project/project/
+project/target/
+target/
+
+#intellij idea
+build/
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
+
+#other
+bin/
+.history
+.scala_dependecies
+.cache
+.cache-main
+
+#general
+*.class
