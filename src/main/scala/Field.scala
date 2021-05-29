@@ -1,20 +1,8 @@
-import org.scalacheck.{Arbitrary, Gen}
 
 import scala.language.implicitConversions
 
 object Lab4 {
   case class ComplexNumber(real: Long, imagine: Long)
-
-  object ComplexNumber {
-    implicit val arb: Arbitrary[ComplexNumber] = Arbitrary {
-      for {
-        re <- Gen.long
-        im <- Gen.long
-      } yield {
-        ComplexNumber(re, im)
-      }
-    }
-  }
 
   trait Field[A] {
     def multiplication(a: A, b: A): A
